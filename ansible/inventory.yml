@@ -1,0 +1,41 @@
+---
+backend1:
+  hosts:
+    57.128.16.113:
+      ansible_user: debian
+      ansible_become: True
+    57.128.68.30:
+      ansible_user: debian
+      ansible_become: True
+
+backend2:
+  hosts:
+    141.94.174.237:
+      ansible_user: debian
+      ansible_become: True
+    57.128.69.34:
+      ansible_user: debian
+      ansible_become: True
+
+backend3:
+  hosts:
+    152.228.209.136:
+      ansible_user: debian
+      ansible_become: True
+      passworddb: AVNS_U99-OMXjNUfTyj87H51
+      domainedb: mysql-7cebe47a-o5d5bb6d4.database.cloud.ovh.net
+      portdb: 20184
+      IpPrive: 192.168.12.193
+    57.128.71.75:
+      ansible_user: debian
+      ansible_become: True
+      passworddb: AVNS_U99-OMXjNUfTyj87H51
+      domainedb: mysql-7cebe47a-o5d5bb6d4.database.cloud.ovh.net
+      portdb: 20184
+      IpPrive: 192.168.12.193
+
+front:
+  hosts:
+    141.94.168.113:
+      ansible_user: debian
+      ansible_become: True

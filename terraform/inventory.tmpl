@@ -1,0 +1,41 @@
+---
+backend1:
+  hosts:
+    ${Instance1_GRA11}:
+      ansible_user: debian
+      ansible_become: True
+    ${Instance1_SBG5}:
+      ansible_user: debian
+      ansible_become: True
+
+backend2:
+  hosts:
+    ${Instance2_GRA11}:
+      ansible_user: debian
+      ansible_become: True
+    ${Instance2_SBG5}:
+      ansible_user: debian
+      ansible_become: True
+
+backend3:
+  hosts:
+    ${Instance3_GRA11}:
+      ansible_user: debian
+      ansible_become: True
+      passworddb: ${passworddb}
+      domainedb: ${domaindb}
+      portdb: ${portdb}
+      IpPrive: ${IpPv}
+    ${Instance3_SBG5}:
+      ansible_user: debian
+      ansible_become: True
+      passworddb: ${passworddb}
+      domainedb: ${domaindb}
+      portdb: ${portdb}
+      IpPrive: ${IpPv}
+
+front:
+  hosts:
+    ${FrontPub_GRA11}:
+      ansible_user: debian
+      ansible_become: True
